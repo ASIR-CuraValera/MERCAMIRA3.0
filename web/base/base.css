@@ -1,0 +1,105 @@
+*{
+
+box-sizing: border-box;
+
+
+}
+ 
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #ebeced;
+    
+}
+
+main {
+    flex:1 0px;
+    
+
+}
+
+
+header{
+
+box-shadow: 0px 7px 14px -5px rgba(0,0,0,0.67);
+height: 100px;
+background: white;
+
+}
+
+
+
+#color{
+
+
+background:#a82828 !important;
+
+}
+
+.color{
+
+
+color:#a82828 !important;
+
+}
+
+
+.contenido{
+
+display: flex;
+align-items: center;
+
+
+padding: 0;
+flex-flow: row nowrap; 
+justify-content: space-between;
+
+}
+
+.linea{
+
+height: 6px;
+background: #a82828;
+
+
+}
+
+
+.logo{
+
+
+width: 200px;
+background: #a82828 !important;
+
+
+}
+
+
+
+
+
+
+/****************COLORES IMPUT*******************/
+
+ .input-field {
+     color: black !important;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #a82828 !important;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #a82828 !important;
+     box-shadow: 0 1px 0 0 #a82828 !important;
+	}
+
+
+/*************************************************/
+
+
+
+
+

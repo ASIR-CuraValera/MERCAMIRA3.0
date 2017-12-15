@@ -1,0 +1,100 @@
+{% extends '::base.html.twig' %}
+
+
+{% block stylesheet %}<link rel="stylesheet" href="{{ asset('frontend/frontend.css')}}">{% endblock %}
+
+{% block sidenav %}
+
+<ul id="slide-out" class="side-nav">
+
+	<li><a class="waves-effect" href="{{path('listar',{'cat':'all'})}}">TODAS</a></li>
+
+
+{% for c in categorias %}
+	<li><a class="waves-effect" href="{{path('listar',{'cat':c.categoriaid})}}">{{c.nombreCategoria}}</a></li>
+    
+{% endfor %}
+  
+
+	
+
+</ul>
+
+	<a href="#" data-activates="slide-out" id="color" class="button-collapse btn-floating btn-large"><i class="material-icons">menu</i></a>
+
+{% endblock %}
+
+
+
+
+{% block imput %}
+
+    <div class="imput">
+        <div class="input-field col s6 ">
+              <input id="first_name" type="text" class="validate" >
+              <label for="first_name ">BUSCAR PRODUCTO</label>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+{% block iconos %}
+
+<a href="{{ path('backend_principal') }}"><i class="small material-icons logos color">account_circle</i></a>
+<a href=""><i class="small material-icons logos color">shopping_basket</i></a>
+
+{% endblock %}
+
+
+
+{% block main %}
+
+<h4>LIBROS</h4>
+<div class="barra"></div>
+
+  <div class="todos">
+
+
+    {% for l in libros %}
+      
+       
+    <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img id="imagenes" class="activator" src="{{asset('frontend/img/'~l.imagen)}}">
+
+    </div>
+
+    <div class="card-content">
+      <span class="card-title activator">{{l.nombreLibro}}</span>
+      <a class="precio">{{l.precio}}</a>
+      </div>
+      <div class="boton">
+        
+      <a id="color" class="waves-effect waves-light btn ">comprar</a>
+
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Descripcion<i class="material-icons right">close</i></span>
+      <p>{{l.descripcion}}</p>
+    </div>
+  </div>
+       
+           
+   
+    {% endfor %}
+
+
+   
+      
+
+  </div>
+    
+
+
+{% endblock %}
+
+
+
+

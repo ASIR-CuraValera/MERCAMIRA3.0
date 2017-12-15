@@ -1,0 +1,58 @@
+/*--------HEADER--------------------------*/
+
+.pagination{
+
+display: flex;
+justify-content: center;
+color: white !important;
+font-weight: bold;
+margin-top:20px;
+}
+
+
+.contenido{
+
+justify-content: space-between;
+
+
+
+}
+
+.volver{
+
+padding: 0px 30px; 
+
+}
+
+.volver:hover{
+
+color:#ad3232;
+transition: all 1s;
+}
+
+
+/*-------CUERPO-----------------------------*/
+
+.barra{
+
+border: 1px solid #a82828;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

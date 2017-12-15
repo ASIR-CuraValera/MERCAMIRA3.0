@@ -1,0 +1,11 @@
+bd:
+    resource: "@BdBundle/Resources/config/routing.yml"
+    prefix:   /database
+
+frontend:
+    resource: "@FrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /backend

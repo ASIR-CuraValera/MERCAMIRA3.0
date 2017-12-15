@@ -1,0 +1,5 @@
+backend_principal:
+    path:     /page
+    defaults: { _controller: AppBundle:Default:index }
+
+

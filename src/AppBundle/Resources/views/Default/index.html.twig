@@ -1,0 +1,80 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheet %}
+        <link rel="stylesheet" href="{{ asset('backend/backend.css')}}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
+
+{% endblock %}
+
+
+{% block iconos %}
+
+<a href="{{ path('frontend_principal') }}" class="volver color"><i class="small material-icons logos ">arrow_back</i>VOLVER</a>
+
+{% endblock %}
+
+
+
+{% block main %}
+    
+<h1>Insertar Libros</h1>
+
+
+<div class="barra"></div>
+  
+   
+<table class="highlight">
+    <thead>
+          <tr>
+              <th>Imagen</th>
+              <th>Libro_id</th>
+              <th>Nombre_libro</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
+              
+              <th>Categoriaid</th>
+              <th>Editoriaid</th>
+              <th>Insertar libro</th>
+          </tr>
+        </thead>
+
+
+
+{% for l in pagination %}
+       
+
+        <tbody>
+          <tr>
+              <th><img src="{{asset('frontend/img/'~l.imagen)}}"></th>
+              <th>{{l.libroId}}</th>
+              <th>{{l.nombreLibro}}</th>
+              <th>{{l.descripcion}}</th>
+              <th>{{l.precio}}</th>
+              
+              <th>{{l.categoriaid.nombreCategoria}}</th>
+              <th>{{l.editorid.nombreEditorial}}</th>
+              
+
+          </tr>
+          
+        </tbody>
+            
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+      </table>
+
+<div class="pagination">
+    {{ knp_pagination_render(pagination) }}
+</div>
+
+{% endblock %}
+

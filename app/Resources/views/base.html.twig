@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}MERCAMIRA{% endblock %}</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+        <!-- FUENTES -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       
+
+        <!-- ESTILOS PROPIOS -->
+
+        <link rel="stylesheet" href="{{ asset('base/base.css')}}"/>
+
+
+        <!-- MATERIALIZE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+        <!-- MATERIALIZE JS Y JQUERY -->
+       <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+        <!-- JS PROPIO -->
+
+        <script type="text/javascript" src="{{ asset('base/app.js')}}"></script>
+
+
+       
+        {% block javascripts %}{% endblock %}
+        {% block stylesheet %}{% endblock %}
+
+
+</head>
+    <body>
+<div class="linea"></div>
+     
+
+<header>
+
+
+<div class="contenido container">
+    
+    <img class="logo" src="{{asset ('base/img/logo2.png')}}">   
+
+
+{% block sidenav %}
+    
+{% endblock %}
+
+
+
+
+
+
+  
+{% block imput %}
+    
+{% endblock %}
+
+
+
+{% block iconos %}
+
+{% endblock %}
+
+
+
+
+
+
+</div>
+
+
+ 
+</header>
+  
+    <main class="container">
+        {% block main %}{% endblock %}
+
+    </main>
+
+
+
+    
+        
+ <footer id="color" class="page-footer">
+          <div class="container">
+            <div class="row color">
+              <div class="col l6 s12">
+                <h5 class="white-text">ENVIAR SUGERENCIAS</h5>
+                <p class="grey-text text-lighten-4">IMPUT</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text"></h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">POR QUÉ COMPRAR</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">QUIÉNES SOMOS</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">CONTACTAR</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">OTROS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              
+            © 2017 Javier Miras
+            
+            </div>
+            
+          </div>
+        </footer>
+
+  
+
+
+
+       
+    </body>
+</html>

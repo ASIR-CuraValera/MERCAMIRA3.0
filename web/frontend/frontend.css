@@ -1,0 +1,81 @@
+.barra{
+
+border: 1px solid #a82828;
+
+}
+
+
+
+
+
+.todos{
+
+display: flex;
+flex-flow: row wrap;
+justify-content:center;
+
+}
+
+.card{
+
+width: 210px;
+height: 300px;
+display: flex;
+justify-content: space-between;
+margin: 15px 10px;
+
+flex-flow: column nowrap;
+
+
+}
+
+
+
+.card-image{
+
+align-self: center;
+
+width: 150px;
+;
+
+
+}
+
+
+.card-title{
+
+font-size: 10px !important;
+font-weight: bold;
+
+
+
+
+
+}
+
+.card-content{
+
+
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+
+overflow: hidden;
+
+
+}
+
+.precio{
+align-self: center;
+
+color:black;
+
+
+}
+
+
+.boton{
+
+align-self: center;
+
+}
